@@ -29,15 +29,6 @@ ciphertext_files = os.listdir(ciphertext_path)
 print("discovered {} plaintext file(s)".format(len(plaintext_files)))
 print("discovered {} ciphertext files(s)".format(len(ciphertext_files)))
 
-# if len(plaintext_files) > 0:
-#     print("removing existing plaintext files…")
-#     for pt in plaintext_files:
-#         pt_path=os.path.join(plaintext_path, pt)
-#         os.remove(pt_path)
-#         print("- deleted file, {}".format(pt))
-# else:
-#     print("no existing plaintext files found, skipping deletion")
-
 if len(ciphertext_files) > 0:
     print("decrypting existing ciphertext files…")
     for ct in ciphertext_files:
