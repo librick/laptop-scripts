@@ -16,7 +16,7 @@ flatpak remote-add --if-not-exists gnome-nightly https://nightly.gnome.org/gnome
 flatpak install -y gnome-nightly org.gnome.Builder.Devel
 readarray -t fps_system < $plaintext_dir/flatpaks-system.txt
 for fp in "${fps_system[@]}"; do
-    flatpak install flathub $fp
+    flatpak install -y flathub $fp
 done
 
 # # Install flatpaks for user
