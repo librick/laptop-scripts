@@ -19,13 +19,8 @@ usermod -aG sudo $username
 sudo ufw logging high
 sudo systemctl enable --now ufw
 
-# Configure zsh
-mkdir -p /etc/zsh; chmod 755 /etc/zsh
-cp ./etc/zsh/zshenv /etc/zsh/zshenv
-chmod 644 /etc/zsh/zshenv
-sudo chsh -s /usr/bin/zsh $username
-
 # Run scripts
+/bin/bash ./install-zsh.sh
 /bin/bash ./install-apt-packages.sh
 sudo -u $username /bin/bash ./install-fonts.sh
 sudo -u $username  /bin/bash ./install-rust.sh
