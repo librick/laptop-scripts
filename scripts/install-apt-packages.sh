@@ -40,6 +40,10 @@ cp $builddir/etc/apt/apt.conf.d/* $apt_conf_dir
 systemctl restart unattended-upgrades.service
 systemctl enable --now unattended-upgrades.service
 
+# Set debconf answers
+apt-get install -y debconf debconf-utils
+echo "wireshark-common wireshark-common/install-setuid boolean true" | debconf-set-selections
+
 # Install apt packages
 apt_packages_file=$plaintext_dir/apt-packages.txt
 xargs apt-get install -y < $apt_packages_file
