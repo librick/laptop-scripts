@@ -1,0 +1,1 @@
+deb [signed-by=/usr/share/keyrings/syncthing-keyring.gpg] https://apt.syncthing.net/ syncthing stable

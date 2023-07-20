@@ -1,0 +1,9 @@
+drafts
+age-plaintext
+key.txt
+**/*.tar.xz
+**/*.tar.gz
+**/*.zip
+**/*.gpg
+**/*.asc
+**/*.deb
