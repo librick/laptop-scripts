@@ -13,7 +13,7 @@ install_keyring () {
     keyring_filename=$2
     rm -f /usr/share/keyrings/$keyring_filename
     wget -O- $keyring_url | gpg --dearmor > $keyring_filename
-    cat $keyring_filename | sudo tee /usr/share/keyrings/$keyring_filename > /dev/null
+    cat $keyring_filename | tee /usr/share/keyrings/$keyring_filename > /dev/null
     chmod 644 /usr/share/keyrings/$keyring_filename
     chown root:root /usr/share/keyrings/$keyring_filename
     rm -f $keyring_filename
