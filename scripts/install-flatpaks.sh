@@ -19,9 +19,9 @@ for fp in "${fps_system[@]}"; do
     flatpak install -y flathub $fp
 done
 
-# # Install flatpaks for user
-# sudo -u $username flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-# readarray -t fps_user < $plaintext_dir/flatpaks-user.txt
-# for fp in "${fps_user[@]}"; do
-#     sudo -u $username flatpak --user install flathub $fp
-# done
+# Install flatpaks for user
+su -c "flatpak --user remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo" $username
+readarray -t fps_user < $plaintext_dir/flatpaks-user.txt
+for fp in "${fps_user[@]}"; do
+    su -c "flatpak --user install flathub $fp" $username
+done
