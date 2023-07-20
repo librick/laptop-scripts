@@ -10,6 +10,7 @@ export RUSTUP_HOME="/home/$username/.local/share/rustup"
 echo CARGO_HOME is $CARGO_HOME
 echo RUSTUP_HOME is $RUSTUP_HOME
 curl https://sh.rustup.rs --proto '=https' --tlsv1.2 -sSf | sh -s -- -y
+source /home/$username/.local/share/cargo/env
 
 # Install cargo packages
 cargo install lsd
