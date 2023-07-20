@@ -14,8 +14,9 @@ rm $builddir/$go_version.linux-amd64.tar.gz
 
 # Install go packages
 # See: https://github.com/golang/vscode-go/wiki/tools
-/usr/local/go/bin/goinstall golang.org/x/tools/gopls@latest
-/usr/local/go/bin/goinstall github.com/go-delve/delve/cmd/dlv@latest
-/usr/local/go/bin/goinstall github.com/fatih/gomodifytags@latest
-/usr/local/go/bin/goinstall github.com/josharian/impl@latest
-/usr/local/go/bin/goinstall honnef.co/go/tools/cmd/staticcheck@latest
+/usr/local/go/bin/go install golang.org/x/tools/gopls@latest
+/usr/local/go/bin/go install github.com/go-delve/delve/cmd/dlv@latest
+/usr/local/go/bin/go install github.com/fatih/gomodifytags@latest
+/usr/local/go/bin/go install github.com/josharian/impl@latest
+/usr/local/go/bin/go install honnef.co/go/tools/cmd/staticcheck@latest
+/usr/local/go/bin/go install filippo.io/age/cmd/...@latest
