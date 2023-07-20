@@ -15,6 +15,7 @@ rm -rf $fonts_dir/nerd-fonts*
 wget $nerdfont_url/FiraCode.zip && unzip FiraCode.zip -d $fonts_dir/nerd-fonts-firacode
 wget $nerdfont_url/Hack.zip && unzip Hack.zip -d $fonts_dir/nerd-fonts-hack
 wget $nerdfont_url/Noto.zip && unzip Noto.zip -d $fonts_dir/nerd-fonts-noto
+chown $username:$username /home/$username/.local/share
 chown -R $username:$username $fonts_dir
 rm ./FiraCode.zip ./Hack.zip ./Noto.zip
 
