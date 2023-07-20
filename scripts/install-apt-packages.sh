@@ -39,7 +39,7 @@ apt-get install -y unattended-upgrades
 apt_conf_dir=/etc/apt/apt.conf.d/
 cp $builddir/etc/apt/apt.conf.d/* $apt_conf_dir
 systemctl restart unattended-upgrades.service
-systemctl systemctl enable --now unattended-upgrades.service
+systemctl enable --now unattended-upgrades.service
 
 # Install apt packages
 apt_packages_file=$plaintext_dir/apt-packages.txt
