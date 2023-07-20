@@ -42,4 +42,4 @@ systemctl enable --now unattended-upgrades.service
 
 # Install apt packages
 apt_packages_file=$plaintext_dir/apt-packages.txt
-xargs sudo apt-get install < $apt_packages_file
+xargs apt-get install < $apt_packages_file
