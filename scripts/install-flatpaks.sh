@@ -6,7 +6,7 @@ fi
 
 username=$(id -u -n 1000)
 builddir=$(pwd)
-$plaintext_dir=$builddir/age-plaintext
+plaintext_dir=$builddir/age-plaintext
 DEBIAN_FRONTEND=noninteractive
 
 # Install flatpaks for system
