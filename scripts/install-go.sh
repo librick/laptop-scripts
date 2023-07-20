@@ -8,7 +8,7 @@ fi
 builddir=$(pwd)
 go_version=$(curl -s https://go.dev/dl/?mode=json | jq -r '.[0].version')
 rm -rf /usr/local/go
-wget https://dl.google.com/go/$go_version.linux-amd64.tar.gz $builddir/
+wget https://dl.google.com/go/$go_version.linux-amd64.tar.gz -O $builddir/
 tar -xvf $builddir/$go_version.linux-amd64.tar.gz /usr/local/
 rm $builddir/$go_version.linux-amd64.tar.gz
 
