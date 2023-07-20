@@ -22,7 +22,7 @@ sudo systemctl enable --now ufw
 # Run scripts
 /bin/bash ./install-zsh.sh
 /bin/bash ./install-apt-packages.sh
-sudo -u $username /bin/bash ./install-fonts.sh
+/bin/bash ./install-fonts.sh
 sudo -u $username  /bin/bash ./install-rust.sh
 /bin/bash ./install-go.sh
 /bin/bash ./install-wireshark.sh
