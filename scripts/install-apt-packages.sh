@@ -31,7 +31,6 @@ cp $builddir/etc/apt/sources.list.d/*.list $apt_sources_dir/
 cp $builddir/etc/apt/preferences.d/* $apt_prefs_dir/
 chmod 644 $apt_sources_dir/*
 chmod 644 $apt_prefs_dir/*
-/bin/bash install-keyrings.sh
 apt-get update
 
 # Install unattended-upgrades
