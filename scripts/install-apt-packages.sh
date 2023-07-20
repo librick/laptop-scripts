@@ -27,8 +27,8 @@ install_keyring https://repo.jellyfin.org/jellyfin_team.gpg.key jellyfin-keyring
 # Install non-default apt sources and preferences
 apt_sources_dir=/etc/apt/sources.list.d/
 apt_prefs_dir=/etc/apt/preferences.d/
-cp ../etc/apt/sources.list.d/*.list $apt_sources_dir/
-cp ../etc/apt/preferences.d/* $apt_prefs_dir/
+cp $builddir/etc/apt/sources.list.d/*.list $apt_sources_dir/
+cp $builddir/etc/apt/preferences.d/* $apt_prefs_dir/
 chmod 644 $apt_sources_dir/*
 chmod 644 $apt_prefs_dir/*
 /bin/bash install-keyrings.sh
@@ -37,7 +37,7 @@ apt-get update
 # Install unattended-upgrades
 apt-get install -y unattended-upgrades
 apt_conf_dir=/etc/apt/apt.conf.d/
-cp ../etc/apt/apt.conf.d/* $apt_conf_dir
+cp $builddir/etc/apt/apt.conf.d/* $apt_conf_dir
 systemctl restart unattended-upgrades.service
 systemctl systemctl enable --now unattended-upgrades.service
 
